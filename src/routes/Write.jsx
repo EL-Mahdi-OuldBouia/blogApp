@@ -3,8 +3,8 @@ import { useUser } from "@clerk/clerk-react";
 import ReactQuill from "react-quill-new";
 const Write = () => {
   const { isLoaded, isSignedIn } = useUser();
-  // if (!isLoaded) return <div>Loading...</div>;
-  // if (isLoaded && !isSignedIn) return <div>Sign in to write a post</div>;
+  if (!isLoaded) return <div>Loading...</div>;
+  if (isLoaded && !isSignedIn) return <div>Sign in to write a post</div>;
   return (
     <div className="h-[calc(100vh-64px)] md:h-[calc(100vh-80px)] flex flex-col gap-6 ">
       <h1 className="text-xl font-light">Create a new Post</h1>
