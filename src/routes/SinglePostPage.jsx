@@ -1,11 +1,4 @@
 import Image from "../components/Image";
-<<<<<<< HEAD
-import { Link } from "react-router-dom";
-import PostMenuActions from "../components/PostMenuActions";
-import Search from "../components/Search";
-import Comments from "../components/Comments";
-const SinglePostPage = () => {
-=======
 import { Link, useParams } from "react-router-dom";
 import PostMenuActions from "../components/PostMenuActions";
 import Search from "../components/Search";
@@ -33,37 +26,12 @@ const SinglePostPage = () => {
   if (isPending) return "Loading...";
   if (error) return "Something went wrong..." + error.message;
   if (!data) return "Post not found";
->>>>>>> 87197b3 (Initial commit with linked GitHub repo)
   return (
     <div className="flex flex-col gap-8">
       {/* details */}
       <div className="flex gap-8">
         <div className="lg:w-3/5 flex flex-col gap-8">
           <h1 className="text-xl md:text-2xl xl:text-3xl 2xl:text-4xl font-semiBold ">
-<<<<<<< HEAD
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-          </h1>
-          <div className="flex items-center gap-2 text-gray-400 text-sm">
-            <span>Written by</span>
-            <Link className="text-blue-800">John Doe</Link>
-            <span>On</span>
-            <Link className="text-blue-800">Web Design</Link>
-          </div>
-          <p className="text-gray-500 font-medium">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
-            adipisci eveniet quia vitae, aperiam minus. Quam esse provident
-            incidunt. Doloremque, expedita! Lorem ipsum dolor sit amet
-            consectetur, adipisicing elit. Excepturi, tempora aliquam?
-          </p>
-        </div>
-        <div className="hidden lg:block w-2/5">
-          <Image
-            src="postImg.jpeg"
-            w="600"
-            className="rounded-2xl object-cover"
-          />
-        </div>
-=======
             {data.title}
           </h1>
           <div className="flex items-center gap-2 text-gray-400 text-sm">
@@ -84,7 +52,6 @@ const SinglePostPage = () => {
             />
           </div>
         )}
->>>>>>> 87197b3 (Initial commit with linked GitHub repo)
       </div>
       {/* content */}
       <div className="flex flex-col md:flex-row gap-8">
@@ -142,15 +109,6 @@ const SinglePostPage = () => {
           <h1 className="mb-4 text-sm font-medium">Author</h1>
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-8">
-<<<<<<< HEAD
-              <Image
-                src="userImg.jpeg"
-                className="w-12 h-12 rounded-full object-cover"
-                w="48"
-                h="48"
-              />
-              <Link className="text-blue-800">John Doe</Link>
-=======
               {data?.user?.img && (
                 <Image
                   src={data.user.img}
@@ -160,7 +118,6 @@ const SinglePostPage = () => {
                 />
               )}
               <Link className="text-blue-800">{data.user.username}</Link>
->>>>>>> 87197b3 (Initial commit with linked GitHub repo)
             </div>
             <p className="text-sm text-gray-500">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
@@ -175,11 +132,7 @@ const SinglePostPage = () => {
               </Link>
             </div>
           </div>
-<<<<<<< HEAD
-          <PostMenuActions />
-=======
           <PostMenuActions post={data} />
->>>>>>> 87197b3 (Initial commit with linked GitHub repo)
           <h1>Categories</h1>
           <div className="flex flex-col gap-2 text-sm">
             <Link to="/" className="underline">
@@ -205,11 +158,7 @@ const SinglePostPage = () => {
           <Search />
         </div>
       </div>
-<<<<<<< HEAD
-      <Comments />
-=======
       <Comments postId={data._id} />
->>>>>>> 87197b3 (Initial commit with linked GitHub repo)
     </div>
   );
 };

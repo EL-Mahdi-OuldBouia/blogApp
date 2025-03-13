@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import Comment from "./Comment";
-const Comments = () => {
-  return (
-    <div className="flex flex-col gap-8 lg:w-3/5">
-      <h1 className="text-xl text-gray-500 underline">Comments</h1>
-      <div className="flex items-center justify-between gap-8 w-full ">
-        <textarea
-          placeholder="write a comment..."
-          className="w-full p-4 rounded-xl"
-        />
-        <button
-=======
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import Comment from "./Comment";
 import axios from "axios";
@@ -84,25 +71,11 @@ const Comments = ({ postId }) => {
         />
         <button
           type="submit"
->>>>>>> 87197b3 (Initial commit with linked GitHub repo)
           className="bg-blue-800 px-4 py-3
          text-white font-medium rounded-xl"
         >
           Send
         </button>
-<<<<<<< HEAD
-      </div>
-      <Comment />
-      <Comment />
-      <Comment />
-      <Comment />
-      <Comment />
-      <Comment />
-      <Comment />
-      <Comment />
-      <Comment />
-      <Comment />
-=======
       </form>
       {isPending ? (
         "Loading..."
@@ -125,7 +98,6 @@ const Comments = ({ postId }) => {
           ))}
         </>
       )}
->>>>>>> 87197b3 (Initial commit with linked GitHub repo)
     </div>
   );
 };
